@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+</head>
+<body>
+    <header>
+        Weather Dashboard
+    </header>
+    <aside id="search-and-history-section">
+        <h1 id="search-section-header">Search for a city</h1>
+        <textarea id="user-input" placeholder="Atlanta"></textarea>
+        <button id="search-button">Search</button>
+        <hr>
+        <div id="search-history"></div>
+    </aside>
+    <div id=weather-current-quick-view>
+        <h1 id="city-and-date"></h1>
+        <p id="temp"></p>
+        <p id="wind"></p>
+        <p id="humidity"></p>
+        <p id="uv-index"></p>
+    </div>
+    <h2 id="five-day-forecast-header">
+        5-day Forecast
+    </h2>
+    <div id="five-day-forecast-container"></div>
+    <script src="logic.js"></script>
+</body>
+</html>
