@@ -4,30 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="lib/moment.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <title>Weather</title>
 </head>
 <body>
     <header>
-        Weather Dashboard
+        <h1>Weather Dashboard</h1>
     </header>
     <aside id="search-and-history-section">
         <h1 id="search-section-header">Search for a city</h1>
-        <textarea id="user-input" placeholder="Atlanta"></textarea>
-        <button id="search-button">Search</button>
+            <form>
+                <input type="text" placeholder="Atlanta"></textarea>
+                <input type="submit" value="Search"></input>
+            </form>    
         <hr>
         <div id="search-history"></div>
     </aside>
-    <div id=weather-current-quick-view>
-        <h1 id="city-and-date"></h1>
-        <p id="temp"></p>
-        <p id="wind"></p>
-        <p id="humidity"></p>
-        <p id="uv-index"></p>
+    <div id="right-section">
+    <div id=weather-current-quick-view class="right-float">
+        <h1 id="city-and-date">Choose City</h1>
+        <p id="temp">Choose City</p>
+        <p id="wind">Choose City</p>
+        <p id="humidity">Choose City</p>
+        <p id="uv-index">Choose City</p>
     </div>
-    <h2 id="five-day-forecast-header">
+    <h2 id="five-day-forecast-header" class="right-float">
         5-day Forecast
     </h2>
-    <div id="five-day-forecast-container"></div>
+    <div id="five-day-forecast-container" class="right-float">
+    <div id="forecastOne">
+            <h2 id="day-one"></h2>
+            <img id="image-one"/>
+            <p>Temp: <span id="temp-one">choose city</span></p>
+            <p>Wind: <span id="wind-one">choose city</span></p>
+            <p>Humidity: <span id="humidity-one">choose city</span></p>
+        </div>
+        <div id="forecastTwo">
+            <h2 id="day-two"></h2>
+            <img id="image-two"/>
+            <p>Temp: <span id="temp-two">choose city</span></p>
+            <p>Wind: <span id="wind-two">choose city</span></p>
+            <p>Humidity: <span id="humidity-two">choose city</span></p>
+        </div>
+        <div id="forecastThree">
+            <h2 id="day-three"></h2>
+            <img id="image-three"/>
+            <p>Temp: <span id="temp-three">choose city</span></p>
+            <p>Wind: <span id="wind-three">choose city</span></p>
+            <p>Humidity: <span id="humidity-three">choose city</span></p>
+        </div>
+        <div id="forecastFour">
+            <h2 id="day-four"></h2>
+            <img id="image-four"/>
+            <p>Temp: <span id="temp-four">choose city</span></p>
+            <p>Wind: <span id="wind-four">choose city</span></p>
+            <p>Humidity: <span id="humidity-four">choose city</span></p>
+        </div>
+        <div id="forecastFive">
+            <h2 id="day-five"></h2>
+            <img id="image-five"/>
+            <p>Temp: <span id="temp-five">choose city</span></p>
+            <p>Wind: <span id="wind-five">choose city</span></p>
+            <p>Humidity: <span id="humidity-five">choose city</span></p>
+        </div>
+    </div>
+    </div>
     <script src="logic.js"></script>
 </body>
 </html>
