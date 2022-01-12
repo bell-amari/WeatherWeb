@@ -1,5 +1,5 @@
 var userInputEl = document.querySelector("#user-input");
-var searchButtonEl = document.querySelector("#button");
+var buttonEl = document.querySelector("#button");
 var searchHistorySectionEl = document.querySelector("#search-history");
 var cityDateEl = document.querySelector("#city-and-date");
 var tempEl = document.querySelector("temp");
@@ -8,6 +8,15 @@ var humidityEl = document.querySelector("humidity");
 var uvIndexEl = document.querySelector("uv-index");
 var currentDate = moment().format('MM/D/YYYY');
 var sunnyImage = "assets/sun.png";
+
+
+buttonEl.addEventListener('click', function(){
+    console.log("Entry submitted");
+    fetch("api.openweathermap.org/data/2.5/forecast?q=" + userInputEl.value + "&appid=3b952097e301819bade638b0b75441c5")
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(e => alert("Ivalid city Name"));
+});
 
 var headersEL = [
     document.querySelector("#day-one"),

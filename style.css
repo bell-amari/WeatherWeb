@@ -48,30 +48,27 @@ form{
     width: 90%;
     height: 40px;
 }
-.right-float {
-    float: right;
-}
 .sunny-conditions-theme{
     background-color: cornflowerblue;
     color: black;
-    margin: 0 14px;
+    margin: 0 16px 0 0;
     padding: 0 20px;
     border-radius: 10px;
-    width: 12%;
+    width: 20%;
 }
 .cloudy-conditions-theme{
     background-color: darkgray;
     color: white;
-    margin: 0 14px;
+    margin: 0 16px 0 0;
     padding: 0 20px;
     border-radius: 10px;
-    width: 12%;
+    width: 20%;
 }
 .raining-conditions-theme{
     background-color: darkslategrey;
     color: white;
-    margin: 0 14px;
+    margin: 0 16px 0 0;
     padding: 0 20px;
     border-radius: 10px;
-    width: 12%;
+    width:20%;
 }
