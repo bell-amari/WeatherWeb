@@ -8,15 +8,54 @@ var humidityEl = document.querySelector("humidity");
 var uvIndexEl = document.querySelector("uv-index");
 var currentDate = moment().format('MM/D/YYYY');
 var sunnyImage = "assets/sun.png";
-
+var apiKey = "api.openweathermap.org/data/2.5/weather?q=Atlanta&appid=6448bd8128588d7c43d52ab41e66cefb";
+var city = "";
+var temp = "";
+var hummidity ="";
+var wind = "";
+var userInputForStoring = [""];
 
 buttonEl.addEventListener('click', function(){
     console.log("Entry submitted");
-    fetch("api.openweathermap.org/data/2.5/forecast?q=" + userInputEl.value + "&appid=3b952097e301819bade638b0b75441c5")
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(e => alert("Ivalid city Name"));
+    userInputForStoring[0] = userInputEl.value;
+    saveInput();
+    getData();
+    console.log(apiKey);
 });
+
+function getData(){
+    fetch(apiKey)
+    .then(function(response){
+        console.log(response);
+        if(response.ok){
+            response.json()
+            .then(function(data){
+                console.log(data);
+            })
+        }
+    })
+    .catch(e => alert("Error! Please Try Again..."));
+}
+
+function saveInput() {
+    localStorage.setItem("Cities", JSON.stringify(userInputForStoring));
+}
+
+function retriveInputHistory(){
+    var getJson = localStorage.getItem("Cities");
+    if(getJson){
+        var savedResponse = JSON.parse(getJson);
+    }
+
+    // console.log(savedResponse);
+}
+
+if (window.addEventListener) {
+    window.addEventListener('load', retriveInputHistory, false);
+} else if (window.attachEvent) { 
+    window.attachEvent('onload', retriveInputHistory);
+}
+
 
 var headersEL = [
     document.querySelector("#day-one"),
