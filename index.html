@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="lib/moment.js"></script>
@@ -14,19 +15,19 @@
     </header>
     <aside id="search-and-history-section">
         <h1 id="search-section-header">Search for a city</h1>
-            <form>
-                <input type="text" placeholder="Atlanta" id="user-input"></textarea>
+            <div id="form">
+                <input type="text" value="Atlanta" id="user-input"></textarea>
                 <input type="submit" value="Search" id="button"></input>
-            </form>    
+            </div>   
         <div id="search-history"></div>
     </aside>
     <div id="right-section">
     <div id="weather-current-quick-view">
-        <h1 id="city-and-date">Choose City</h1>
-        <p id="temp">Choose City</p>
-        <p id="wind">Choose City</p>
-        <p id="humidity">Choose City</p>
-        <p id="uv-index">Choose City</p>
+        <h1 id="city-and-date">Search or select city to see details</h1>
+        <p>Temp: <span id="temp"></span></p>
+        <p>Wind: <span id="wind"></span></p>
+        <p>Humidity: <span id="humidity"></span></p>
+        <p>UV: <span id="uv-index"></span></p>
     </div>
     <h2 id="five-day-forecast-header">
         5-day Forecast
@@ -35,37 +36,37 @@
         <div id="forecastOne">
             <h2 id="day-one"></h2>
             <img id="image-one"/>
-            <p>Temp: <span id="temp-one">choose city</span></p>
-            <p>Wind: <span id="wind-one">choose city</span></p>
-            <p>Humidity: <span id="humidity-one">choose city</span></p>
+            <p>Temp: <span id="temp-one"></span></p>
+            <p>Wind: <span id="wind-one"></span></p>
+            <p>Humidity: <span id="humidity-one"></span></p>
         </div>
         <div id="forecastTwo">
             <h2 id="day-two"></h2>
             <img id="image-two"/>
-            <p>Temp: <span id="temp-two">choose city</span></p>
-            <p>Wind: <span id="wind-two">choose city</span></p>
-            <p>Humidity: <span id="humidity-two">choose city</span></p>
+            <p>Temp: <span id="temp-two"></span></p>
+            <p>Wind: <span id="wind-two"></span></p>
+            <p>Humidity: <span id="humidity-two"></span></p>
         </div>
         <div id="forecastThree">
             <h2 id="day-three"></h2>
             <img id="image-three"/>
-            <p>Temp: <span id="temp-three">choose city</span></p>
-            <p>Wind: <span id="wind-three">choose city</span></p>
-            <p>Humidity: <span id="humidity-three">choose city</span></p>
+            <p>Temp: <span id="temp-three"></span></p>
+            <p>Wind: <span id="wind-three"></span></p>
+            <p>Humidity: <span id="humidity-three"></span></p>
         </div>
         <div id="forecastFour">
             <h2 id="day-four"></h2>
             <img id="image-four"/>
-            <p>Temp: <span id="temp-four">choose city</span></p>
-            <p>Wind: <span id="wind-four">choose city</span></p>
-            <p>Humidity: <span id="humidity-four">choose city</span></p>
+            <p>Temp: <span id="temp-four"></span></p>
+            <p>Wind: <span id="wind-four"></span></p>
+            <p>Humidity: <span id="humidity-four"></span></p>
         </div>
         <div id="forecastFive">
             <h2 id="day-five"></h2>
             <img id="image-five"/>
-            <p>Temp: <span id="temp-five">choose city</span></p>
-            <p>Wind: <span id="wind-five">choose city</span></p>
-            <p>Humidity: <span id="humidity-five">choose city</span></p>
+            <p>Temp: <span id="temp-five"></span></p>
+            <p>Wind: <span id="wind-five"></span></p>
+            <p>Humidity: <span id="humidity-five"></span></p>
         </div>
     </div>
     </div>

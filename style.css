@@ -25,7 +25,7 @@ input {
     font-size: 30px;
     margin: 0 0 5px 0;
 }
-form{
+#form{
     border-bottom: 2px solid black;
     padding-bottom: 10px;
 }
@@ -69,6 +69,15 @@ form{
     color: white;
     margin: 0 16px 0 0;
     padding: 0 20px;
+    border-radius: 10px;
+    width:20%;
+}
+.default-conditions-theme{
+    background-color: white;
+    color: Black;
+    margin: 0 16px 0 0;
+    padding: 0 20px;
+    border: solid black 2px;
     border-radius: 10px;
     width:20%;
 }
